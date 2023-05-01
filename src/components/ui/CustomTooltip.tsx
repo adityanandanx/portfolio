@@ -17,7 +17,9 @@ const CustomTooltip: FC<CustomTooltipProps> = ({
     return (
         <Tooltip.Provider {...props}>
             <Tooltip.Root>
-                <Tooltip.Trigger>{children}</Tooltip.Trigger>
+                <Tooltip.Trigger className="text-left">
+                    {children}
+                </Tooltip.Trigger>
                 <Tooltip.Portal>
                     <AnimatePresence>
                         <Tooltip.Content
@@ -28,9 +30,9 @@ const CustomTooltip: FC<CustomTooltipProps> = ({
                             forceMount
                         >
                             <motion.div
-                                initial={{ opacity: 0, x: "-100%" }}
-                                animate={{ opacity: 1, x: "10%" }}
-                                exit={{ opacity: 0, x: "-100%" }}
+                                initial={{ opacity: 0, y: "-100%" }}
+                                animate={{ opacity: 1, y: "10%" }}
+                                exit={{ opacity: 0, y: "-100%" }}
                             >
                                 {tooltipText}
                                 <Tooltip.Arrow className="fill-white" />

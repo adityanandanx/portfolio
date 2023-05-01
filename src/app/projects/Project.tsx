@@ -45,13 +45,13 @@ const Project: FC<ProjectProps> = ({
     });
     const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
     const y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
-    const imageY = useTransform(scrollYProgress, [0, 0.5], ["-50%", "0%"]);
+    const imageY = useTransform(scrollYProgress, [0, 0.5], ["-60%", "0%"]);
 
     return (
         <motion.div
             ref={scrollTarget}
             className={cn(
-                "overflow-hidden sticky p-5 py-10 sm:px-16 lg:px-32 rounded-md top-0 w-full min-h-screen group bg-stone-100 dark:bg-stone-700 flex items-center justify-center",
+                "overflow-hidden sticky p-5 py-10 sm:px-16 lg:px-32 rounded-md top-0 w-full min-h-screen group bg-stone-100 dark:bg-stone-700 flex items-start pt-32 lg:items-center lg:pt-10 justify-center",
                 className
             )}
             style={{ ...style }}
@@ -124,7 +124,7 @@ const Project: FC<ProjectProps> = ({
                             opacity,
                             y: imageY,
                         }}
-                        className="absolute -bottom-4 sm:-bottom-16 left-10 right-10 -z-10 lg:static lg:w-1/2"
+                        className="absolute -bottom-6 sm:-bottom-32 left-5 right-5 -z-10 lg:static lg:w-1/2"
                     >
                         <Image className="" src={imgPath} alt={title} />
                     </motion.div>

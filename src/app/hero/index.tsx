@@ -35,16 +35,16 @@ const Hero: FC<HeroProps> = ({}) => {
                 style={{ position }}
                 className="fixed inset-0 top-0 p-10 flex flex-col justify-between h-full"
             >
-                <Heading style={{ scale }}>
+                <Heading className="w-fit" style={{ scale }}>
                     Hello There! <br />I am <br />
                     <CustomTooltip
-                        side="right"
+                        side="bottom"
                         delayDuration={0}
                         tooltipText="Say Hi!"
                     >
                         <Link
                             href={"/"}
-                            className="text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-50 dark:bg-stone-900 hover:bg-stone-900 dark:hover:bg-stone-50 hover:text-orange-400 dark:hover:text-orange-600 leading-normal rounded-lg transition-colors ease-out"
+                            className="inline-block w-fit text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-100 dark:bg-stone-900 leading-normal rounded-lg"
                         >
                             Aditya Nandan
                         </Link>
