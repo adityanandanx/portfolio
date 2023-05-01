@@ -10,9 +10,16 @@ const description =
 const url = "https://adityanandan.vercel.app/";
 const images = [
     {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 628,
+        alt: "Aditya Nandan's website",
+    },
+    {
         url: "/og-image.jpg",
         width: 1200,
         height: 628,
+        alt: "Aditya Nandan's website",
     },
 ];
 
