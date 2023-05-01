@@ -85,7 +85,8 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "0%" }}
                     // animate={controls}
-                    className="w-full"
+                    whileTap={{ cursor: "grabbing" }}
+                    className="w-full cursor-grab"
                 >
                     <Testimonial
                         testimonial={testimonials[currentTestimonialIndex]}
