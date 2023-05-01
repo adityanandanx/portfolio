@@ -1,12 +1,11 @@
 "use client";
 import { FC, useRef } from "react";
-import heroImg from "./hero.jpg";
-import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import CustomTooltip from "@/components/ui/CustomTooltip";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Heading from "@/components/ui/Heading";
+import { MdChevronRight } from "react-icons/md";
 
 interface HeroProps {}
 
@@ -17,10 +16,8 @@ const Hero: FC<HeroProps> = ({}) => {
         offset: ["start end", "end start"],
     });
     const opacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
-    // const x = useTransform(scrollYProgress, [0.5, 1], ["0%", "5%"]);
     const scale = useTransform(scrollYProgress, [0.5, 1], ["100%", "90%"]);
     const y = useTransform(scrollYProgress, [0.5, 1], ["0%", "-100%"]);
-    const imageY = useTransform(scrollYProgress, [0.5, 1], ["-50%", "0%"]);
     const position = useTransform(scrollYProgress, (pos) => {
         return pos >= 1 ? "relative" : "fixed";
     });
@@ -44,7 +41,7 @@ const Hero: FC<HeroProps> = ({}) => {
                     >
                         <Link
                             href={"/"}
-                            className="inline-block w-fit text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-100 dark:bg-stone-900 leading-normal rounded-lg"
+                            className="inline-block w-fit text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-100 dark:bg-stone-900 leading-none rounded-lg"
                         >
                             Aditya Nandan
                         </Link>
@@ -59,22 +56,13 @@ const Hero: FC<HeroProps> = ({}) => {
                         and I make unique web experiences for small to large
                         scale brands.
                     </p>
-                    <div className="flex gap-3">
-                        <Button>Projects</Button>
+                    <div className="flex flex-col items-start gap-3">
+                        <Button>
+                            Get In Touch <MdChevronRight />
+                        </Button>
                         <Button variant={"secondary"}>Projects</Button>
                     </div>
                 </motion.div>
-                {/* <motion.div
-                    className="absolute right-0 sm:right-0 pl-64 top-1/2 -z-10"
-                    style={{ y: imageY }}
-                >
-                    <Image
-                        priority
-                        className="rounded-full w-full h-full max-w-screen-lg"
-                        src={heroImg}
-                        alt="abstract design"
-                    />
-                </motion.div> */}
             </motion.div>
         </motion.section>
     );

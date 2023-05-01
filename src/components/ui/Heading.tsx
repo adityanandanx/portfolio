@@ -16,7 +16,10 @@ const Heading: FC<HeadingProps> = ({
     return (
         <motion.h1
             style={{ ...syne.style, ...style }}
-            className={cn("text-5xl sm:text-6xl leading-none", className)}
+            className={cn(
+                "text-5xl sm:text-7xl md:text-8xl leading-none",
+                className
+            )}
             {...props}
         >
             {children}
