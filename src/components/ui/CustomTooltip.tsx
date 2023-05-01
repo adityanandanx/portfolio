@@ -25,6 +25,7 @@ const CustomTooltip: FC<CustomTooltipProps> = ({
                             className="select-none rounded-md bg-stone-50 px-3 py-2 text-base leading-none shadow-lg will-change-[transform,opacity] text-black"
                             sideOffset={5}
                             side={side || "top"}
+                            forceMount
                         >
                             <motion.div
                                 initial={{ opacity: 0, x: "-100%" }}
