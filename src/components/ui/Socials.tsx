@@ -11,10 +11,10 @@ interface SocialsProps extends HTMLAttributes<HTMLDivElement> {
 
 const Socials: FC<SocialsProps> = ({ socials, className, ...props }) => {
     return (
-        <span className={cn(`flex flex-wrap gap-0`, className)}>
+        <span className={cn(`flex flex-wrap gap-10`, className)}>
             {socials.map((social, key) => (
                 <Link key={key} aria-label={social.name} href={social.href}>
-                    <Button className="text-4xl" variant={"secondary"}>
+                    <Button className="text-4xl p-0" variant={"secondary"}>
                         {social.icon}
                     </Button>
                 </Link>
