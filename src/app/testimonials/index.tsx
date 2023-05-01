@@ -14,7 +14,7 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
     const inView = useInView(target, { margin: "-100px", once: true });
 
     return (
-        <motion.div className="h-screen w-full gap-10 flex items-center justify-center outline-none">
+        <motion.div className="min-h-screen w-full gap-10 flex items-center justify-center outline-none">
             <motion.div
                 ref={target}
                 style={{
@@ -23,7 +23,7 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
                     transition:
                         "opacity 700ms ease-out, transform 700ms ease-out",
                 }}
-                className="w-full h-fit max-w-2xl"
+                className="w-full h-full max-w-2xl"
             >
                 <TestimonialSlider
                     testimonials={[
