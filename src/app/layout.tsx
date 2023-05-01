@@ -15,13 +15,11 @@ export default function RootLayout({
 }) {
     return (
         <html
-            className="w-full h-full min-h-screen max-h-[1024px] bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased"
+            className="w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased"
             lang="en"
         >
             <body className={`w-full h-full ${inter.className}`}>
-                <main className="w-full h-full max-w-5xl mx-auto">
-                    {children}
-                </main>
+                <main className="w-full h-full px-5 md:px-10">{children}</main>
             </body>
         </html>
     );

@@ -1,6 +1,6 @@
 "use client";
 import { FC, useRef } from "react";
-import heroImg from "./hero.webp";
+import heroImg from "./hero.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
@@ -20,6 +20,7 @@ const Hero: FC<HeroProps> = ({}) => {
     // const x = useTransform(scrollYProgress, [0.5, 1], ["0%", "5%"]);
     const scale = useTransform(scrollYProgress, [0.5, 1], ["100%", "90%"]);
     const y = useTransform(scrollYProgress, [0.5, 1], ["0%", "-100%"]);
+    const imageY = useTransform(scrollYProgress, [0.5, 1], ["-50%", "0%"]);
     const position = useTransform(scrollYProgress, (pos) => {
         return pos >= 1 ? "relative" : "fixed";
     });
@@ -43,7 +44,7 @@ const Hero: FC<HeroProps> = ({}) => {
                     >
                         <Link
                             href={"/"}
-                            className="outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-50 dark:bg-stone-900 hover:bg-stone-900 dark:hover:bg-stone-50 hover:text-orange-400 dark:hover:text-orange-600 leading-normal rounded-lg transition-colors ease-out"
+                            className="text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-50 dark:bg-stone-900 hover:bg-stone-900 dark:hover:bg-stone-50 hover:text-orange-400 dark:hover:text-orange-600 leading-normal rounded-lg transition-colors ease-out"
                         >
                             Aditya Nandan
                         </Link>
@@ -63,10 +64,13 @@ const Hero: FC<HeroProps> = ({}) => {
                         <Button variant={"secondary"}>Projects</Button>
                     </div>
                 </motion.div>
-                {/* <motion.div style={{ y }}>
+                {/* <motion.div
+                    className="absolute right-0 sm:right-0 pl-64 top-1/2 -z-10"
+                    style={{ y: imageY }}
+                >
                     <Image
                         priority
-                        className="absolute -z-10 right-5 sm:right-10 top-1/2 -translate-y-1/2 rounded-full w-5/6 max-w-xl"
+                        className="rounded-full w-full h-full max-w-screen-lg"
                         src={heroImg}
                         alt="abstract design"
                     />
