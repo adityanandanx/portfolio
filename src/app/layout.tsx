@@ -1,3 +1,4 @@
+import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -19,7 +20,9 @@ export default function RootLayout({
             lang="en"
         >
             <body className={`w-full h-full ${inter.className}`}>
-                <main className="w-full h-full px-5 md:px-10">{children}</main>
+                <main className="w-full h-full px-5 md:px-10">
+                    <SmoothScrollWrapper>{children}</SmoothScrollWrapper>
+                </main>
             </body>
         </html>
     );

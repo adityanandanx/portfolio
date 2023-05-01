@@ -7,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC, useRef } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
+import { MdArrowOutward, MdOpenInNew } from "react-icons/md";
 import { Url } from "url";
 
 const syne = Syne({ subsets: ["latin"], weight: ["600"] });
@@ -55,9 +56,26 @@ const Project: FC<ProjectProps> = ({
                     className="flex-1 w-full flex flex-col gap-1"
                 >
                     <h2 className="text-xl">{title}</h2>
-                    <h1 style={syne.style} className={`text-4xl`}>
-                        {desc}
-                    </h1>
+                    <Link
+                        target="_blank"
+                        className="relative"
+                        href={live || "/"}
+                    >
+                        <motion.h1
+                            style={syne.style}
+                            initial={{
+                                backgroundSize: "0% 2px",
+                            }}
+                            whileHover={{
+                                backgroundSize: "100% 2px",
+                            }}
+                            transition={{ duration: 0.5 }}
+                            className="peer text-4xl inline text-justify bg-gradient-to-r from-stone-200 to-stone-100 bg-no-repeat bg-left-bottom"
+                        >
+                            {desc}
+                        </motion.h1>
+                        <MdArrowOutward className="text-4xl absolute bottom-full left-full opacity-0 peer-hover:opacity-100 transition-opacity" />
+                    </Link>
                     <div className="flex flex-wrap items-center gap-0 text-xs">
                         {tags.map((tag, i) => (
                             <>
