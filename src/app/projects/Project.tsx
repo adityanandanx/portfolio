@@ -1,7 +1,13 @@
 "use client";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import { HTMLMotionProps, motion, useInView } from "framer-motion";
+import {
+    HTMLMotionProps,
+    motion,
+    useInView,
+    useScroll,
+    useTransform,
+} from "framer-motion";
 import { Syne } from "next/font/google";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -28,30 +34,34 @@ const Project: FC<ProjectProps> = ({
     imgPath,
     github,
     live,
+    style,
     className,
     ...props
 }) => {
-    const target = useRef(null);
-    const inView = useInView(target, { margin: "-100px", once: true });
+    const scrollTarget = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: scrollTarget,
+        offset: ["start end", "end start"],
+    });
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+    const y = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
+    const imageY = useTransform(scrollYProgress, [0, 0.5], ["-50%", "0%"]);
 
     return (
         <motion.div
+            ref={scrollTarget}
             className={cn(
                 "overflow-hidden sticky p-5 py-10 sm:px-16 lg:px-32 rounded-md top-0 w-full min-h-screen group bg-stone-100 dark:bg-stone-700 flex items-center justify-center",
                 className
             )}
+            style={{ ...style }}
             {...props}
         >
-            <div
-                ref={target}
-                className="pb-32 md:pb-0 flex flex-col md:group-even:flex-row-reverse md:flex-row items-center justify-between gap-10"
-            >
+            <div className="pb-32 md:pb-0 flex flex-col md:group-even:flex-row-reverse md:flex-row items-center justify-between gap-10">
                 <motion.div
                     style={{
-                        y: inView ? "0%" : "50%",
-                        opacity: inView ? 1 : 0,
-                        transition:
-                            "opacity 700ms ease-out, transform 700ms ease-out",
+                        // opacity,
+                        y,
                     }}
                     className="flex-1 w-full flex flex-col gap-1"
                 >
@@ -70,7 +80,7 @@ const Project: FC<ProjectProps> = ({
                                 backgroundSize: "100% 2px",
                             }}
                             transition={{ duration: 0.5 }}
-                            className="peer text-4xl inline text-justify bg-gradient-to-r from-stone-200 to-stone-100 bg-no-repeat bg-left-bottom"
+                            className="peer text-4xl inline text-justify bg-gradient-to-r from-current to-current/50 bg-no-repeat bg-left-bottom"
                         >
                             {desc}
                         </motion.h1>
@@ -111,10 +121,8 @@ const Project: FC<ProjectProps> = ({
                 {imgPath && (
                     <motion.div
                         style={{
-                            y: inView ? "0%" : "50%",
-                            opacity: inView ? 1 : 0,
-                            transition:
-                                "opacity 400ms ease-out, transform 400ms ease-out",
+                            opacity,
+                            y: imageY,
                         }}
                         className="absolute -bottom-4 sm:-bottom-16 left-10 right-10 -z-10 lg:static lg:w-1/2"
                     >
