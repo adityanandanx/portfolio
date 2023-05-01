@@ -14,7 +14,10 @@ const Socials: FC<SocialsProps> = ({ socials, className, ...props }) => {
         <span className={cn(`flex flex-wrap gap-10`, className)}>
             {socials.map((social, key) => (
                 <Link key={key} aria-label={social.name} href={social.href}>
-                    <Button className="text-4xl p-0" variant={"secondary"}>
+                    <Button
+                        className="text-4xl p-0 text-inherit"
+                        variant={"secondary"}
+                    >
                         {social.icon}
                     </Button>
                 </Link>
