@@ -1,14 +1,8 @@
 "use client";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import {
-    HTMLMotionProps,
-    motion,
-    useInView,
-    useScroll,
-    useTransform,
-} from "framer-motion";
-import { Staatliches, Syne } from "next/font/google";
+import { HTMLMotionProps, motion, useInView } from "framer-motion";
+import { Syne } from "next/font/google";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC, useRef } from "react";
@@ -65,12 +59,11 @@ const Project: FC<ProjectProps> = ({
                         {desc}
                     </h1>
                     <div className="flex flex-wrap items-center gap-0 text-xs">
-                        {tags.map((tag, key) => (
+                        {tags.map((tag, i) => (
                             <>
-                                <span key={key} className="px-2 py-1">
+                                <span key={tag} className="px-2 py-1">
                                     {tag}
                                 </span>
-                                <span className="last:hidden">&#x2022;</span>
                             </>
                         ))}
                     </div>

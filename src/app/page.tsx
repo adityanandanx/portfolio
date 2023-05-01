@@ -1,11 +1,13 @@
 import Hero from "./Hero";
 import Projects from "./projects";
+import Testimonials from "./testimonials";
 
 export default function Home() {
     return (
         <>
             <Hero />
             <Projects />
+            <Testimonials />
             <section className="h-[300vh] my-32">
                 <div className="sticky top-10 left-10">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
