@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, FC } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { HTMLMotionProps, motion } from "framer-motion";
 
 const ButtonVariants = cva(
     "px-10 py-3 text-sm font-medium rounded-full focus:ring ring-stone-200 outline-none flex items-center gap-2 disabled:opacity-50 transition-all",
@@ -25,7 +26,7 @@ const ButtonVariants = cva(
     }
 );
 export interface ButtonProps
-    extends ButtonHTMLAttributes<HTMLButtonElement>,
+    extends HTMLMotionProps<"button">,
         VariantProps<typeof ButtonVariants> {
     isLoading?: boolean;
 }
@@ -38,12 +39,12 @@ const Button: FC<ButtonProps> = ({
     ...props
 }) => {
     return (
-        <button
+        <motion.button
             className={cn(ButtonVariants({ variant, brightness, className }))}
             {...props}
         >
             {children}
-        </button>
+        </motion.button>
     );
 };
 
