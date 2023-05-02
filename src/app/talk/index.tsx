@@ -6,6 +6,7 @@ import { Syne } from "next/font/google";
 import { FC } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdChevronRight } from "react-icons/md";
+import LetterAnim from "../../components/animations/LetterAnim";
 
 const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 interface TalkProps {}
@@ -15,12 +16,15 @@ const Talk: FC<TalkProps> = ({}) => {
         <section className="w-full min-h-[90vh] p-0">
             <div className="w-full h-full p-16 md:p-24 bg-stone-800 dark:bg-stone-700 text-stone-50 rounded-xl flex flex-col items-start justify-between">
                 <div className="h-full">
-                    <h2 className="text-2xl">Have a project for Me?</h2>
+                    <h2 className="text-2xl">
+                        <LetterAnim text="Have a project for Me?" />
+                    </h2>
                     <h1
                         style={{ ...syne.style }}
                         className="text-7xl sm:text-8xl md:text-9xl"
                     >
-                        Let&rsquo;s Talk
+                        <LetterAnim text="Let's Talk" />
+                        {/* Let&rsquo;s Talk */}
                     </h1>
                     <form
                         action="mailto:dev2005adi@gmail.com"
@@ -45,7 +49,8 @@ const Talk: FC<TalkProps> = ({}) => {
                 </div>
                 <footer className="w-full flex flex-col md:flex-row md:items-center justify-between">
                     <span style={syne.style} className="text-2xl">
-                        Aditya Nandan
+                        <LetterAnim text="Aditya Nandan" />
+                        {/* Aditya Nandan */}
                     </span>
                     <Socials
                         className="text-stone-50"

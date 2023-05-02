@@ -88,11 +88,9 @@ const Project: FC<ProjectProps> = ({
                     </Link>
                     <div className="flex flex-wrap items-center gap-0 text-xs">
                         {tags.map((tag, i) => (
-                            <>
-                                <span key={tag} className="px-2 py-1">
-                                    {tag}
-                                </span>
-                            </>
+                            <span key={i} className="px-2 py-1">
+                                {tag}
+                            </span>
                         ))}
                     </div>
                     <div className="flex gap-5">
