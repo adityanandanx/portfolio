@@ -67,6 +67,7 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
             className="flex w-full items-center justify-center"
         >
             <Button
+                whileHover={{ scale: 1.1, x: -5 }}
                 variant={"secondary"}
                 brightness={"dim"}
                 className="text-5xl p-0 sm:p-5"
@@ -94,6 +95,7 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
                 </motion.div>
             </AnimatePresence>
             <Button
+                whileHover={{ scale: 1.1, x: 5 }}
                 variant={"secondary"}
                 brightness={"dim"}
                 className="text-5xl p-0 sm:p-5"
