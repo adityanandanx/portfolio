@@ -32,7 +32,7 @@ const Field: FC<FieldProps> = ({
                 <>
                     <input
                         className={cn(
-                            "flex-1 w-full outline-none bg-stone-100 text-stone-900 dark:bg-stone-900 px-5 py-2 rounded-md focus-within:ring ring-orange-500/20",
+                            "flex-1 w-full outline-none bg-stone-500 text-stone-50 dark:bg-stone-500 dark:text-stone-50 px-5 py-2 rounded-md focus-within:ring ring-orange-500/20",
                             className
                         )}
                         id={id}
@@ -45,7 +45,7 @@ const Field: FC<FieldProps> = ({
             ) : (
                 <textarea
                     className={cn(
-                        "flex-1 w-full outline-none bg-stone-100 text-stone-900 dark:bg-stone-900 px-5 py-2 rounded-md focus-within:ring ring-orange-500/20",
+                        "flex-1 w-full outline-none bg-stone-500 text-stone-50 dark:bg-stone-500 dark:text-stone-50 px-5 py-2 rounded-md focus-within:ring ring-orange-500/20",
                         className
                     )}
                     name={id}
