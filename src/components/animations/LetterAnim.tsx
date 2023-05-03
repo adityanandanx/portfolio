@@ -3,11 +3,11 @@ import { FC, useRef } from "react";
 
 interface LetterAnimProps {
     text: string;
-    splitter?: string;
 }
 
-const LetterAnim: FC<LetterAnimProps> = ({ text, splitter = "" }) => {
-    const letters = text.split(splitter);
+const LetterAnim: FC<LetterAnimProps> = ({ text }) => {
+    // const letters = text.split("");
+    const words = text.split(" ");
 
     const containerRef = useRef(null);
     const inView = useInView(containerRef, {
@@ -40,24 +40,28 @@ const LetterAnim: FC<LetterAnimProps> = ({ text, splitter = "" }) => {
             variants={containerVariant}
             animate={inView ? "visible" : "hidden"}
             ref={containerRef}
-            className="inline"
+            className="flex flex-wrap"
             aria-label={text}
         >
             {/* {inView.toString()} */}
-            {letters.map((l, i) => {
-                if (l === " ") {
-                    return <span className=""> </span>;
-                }
-
+            {words.map((word, i) => {
+                const letters = word.split("");
                 return (
-                    <motion.span
-                        variants={letterVariant}
-                        key={i}
-                        className="inline-block"
-                        aria-hidden
-                    >
-                        {l}
-                    </motion.span>
+                    <div className="flex">
+                        {letters.map((letter, j) => {
+                            return (
+                                <motion.span
+                                    variants={letterVariant}
+                                    key={j}
+                                    className="inline-block"
+                                    aria-hidden
+                                >
+                                    {letter}
+                                </motion.span>
+                            );
+                        })}
+                        &nbsp;
+                    </div>
                 );
             })}
         </motion.div>

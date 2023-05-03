@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.3",
     "@radix-ui/react-label": "^2.0.1",
     "@radix-ui/react-tooltip": "^1.0.5",
     "@studio-freight/react-lenis": "^0.0.17",
