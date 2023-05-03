@@ -47,7 +47,7 @@ const LetterAnim: FC<LetterAnimProps> = ({ text }) => {
             {words.map((word, i) => {
                 const letters = word.split("");
                 return (
-                    <div className="flex">
+                    <div key={i} className="flex">
                         {letters.map((letter, j) => {
                             return (
                                 <motion.span
