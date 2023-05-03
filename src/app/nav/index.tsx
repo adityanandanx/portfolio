@@ -43,7 +43,7 @@ const Nav: FC<navProps> = ({}) => {
                                 animate={{ x: "0%" }}
                                 exit={{ x: "-100%" }}
                                 transition={{ ease: "circOut" }}
-                                className="fixed z-30 inset-0 right-32 bg-stone-900 text-stone-50 p-5 flex flex-col shadow-lg focus:outline-none"
+                                className="fixed z-30 inset-0 right-10 bg-stone-900 text-stone-50 p-5 flex flex-col shadow-lg focus:outline-none"
                             >
                                 <MotionConfig
                                     transition={{
