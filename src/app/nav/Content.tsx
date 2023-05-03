@@ -83,7 +83,7 @@ const NavLink: FC<{ children?: React.ReactNode; href: string | Url }> = ({
                     },
                 }}
                 className="block p-5 text-stone-400 origin-left"
-                href={"/"}
+                href={href}
             >
                 {/* <span className="text-stone-500 text-8xl leading-10">/</span> */}
                 {children}
