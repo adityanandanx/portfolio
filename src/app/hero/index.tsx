@@ -24,6 +24,7 @@ const Hero: FC<HeroProps> = ({}) => {
 
     return (
         <motion.section
+            id="home"
             ref={target}
             style={{ opacity }}
             className="relative w-full h-screen mb-[100vh]"

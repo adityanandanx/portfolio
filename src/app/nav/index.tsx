@@ -2,10 +2,8 @@
 import { FC, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { MdClose, MdMenu } from "react-icons/md";
-import Button from "@/components/ui/Button";
 import { Syne } from "next/font/google";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import LetterAnim from "@/components/animations/LetterAnim";
 import Content from "./Content";
 
 const syne = Syne({ subsets: ["latin"], weight: ["700"] });
@@ -32,7 +30,10 @@ const Nav: FC<navProps> = ({}) => {
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
+                                exit={{
+                                    opacity: 0,
+                                    transition: { duration: 0.01 },
+                                }}
                                 className="fixed inset-0 bg-stone-900/50"
                             ></motion.div>
                         </Dialog.Overlay>
@@ -42,7 +43,7 @@ const Nav: FC<navProps> = ({}) => {
                                 animate={{ x: "0%" }}
                                 exit={{ x: "-100%" }}
                                 transition={{ ease: "circOut" }}
-                                className="fixed z-30 inset-0 bg-stone-900 text-stone-50 p-5 flex flex-col shadow-lg focus:outline-none"
+                                className="fixed z-30 inset-0 right-32 bg-stone-900 text-stone-50 p-5 flex flex-col shadow-lg focus:outline-none"
                             >
                                 <MotionConfig
                                     transition={{

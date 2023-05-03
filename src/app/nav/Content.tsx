@@ -1,8 +1,9 @@
 import { Variants, motion } from "framer-motion";
 import { Syne } from "next/font/google";
 import Link from "next/link";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { Url } from "url";
+import { DialogClose } from "@radix-ui/react-dialog";
 
 const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 interface Link {
@@ -11,11 +12,11 @@ interface Link {
 }
 
 const LINKS: Link[] = [
-    { name: "Home", href: "/" },
-    { name: "About Me", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About Me", href: "/#about" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
 ];
 
 interface ContentProps {}
@@ -72,22 +73,24 @@ const NavLink: FC<{ children?: React.ReactNode; href: string | Url }> = ({
 
     return (
         <li className="overflow-hidden">
-            <AnimatedLink
-                variants={itemVariant}
-                whileTap={{ scale: 0.95 }}
-                whileHover={{
-                    scale: 1.05,
-                    color: "rgb(250 250 249)",
-                    transition: {
-                        duration: 0.24,
-                    },
-                }}
-                className="block p-5 text-stone-400 origin-left"
-                href={href}
-            >
-                {/* <span className="text-stone-500 text-8xl leading-10">/</span> */}
-                {children}
-            </AnimatedLink>
+            <DialogClose asChild>
+                <AnimatedLink
+                    variants={itemVariant}
+                    whileTap={{ scale: 0.95 }}
+                    whileHover={{
+                        scale: 1.05,
+                        color: "rgb(250 250 249)",
+                        transition: {
+                            duration: 0.24,
+                        },
+                    }}
+                    className="block p-5 text-stone-400 origin-left"
+                    href={href}
+                >
+                    {/* <span className="text-stone-500 text-8xl leading-10">/</span> */}
+                    {children}
+                </AnimatedLink>
+            </DialogClose>
         </li>
     );
 };

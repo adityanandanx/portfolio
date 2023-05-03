@@ -14,7 +14,10 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
     const inView = useInView(target, { margin: "-100px", once: true });
 
     return (
-        <motion.div className="min-h-screen w-full flex items-center justify-center outline-none">
+        <motion.section
+            id="testimonials"
+            className="min-h-screen w-full flex items-center justify-center outline-none"
+        >
             <motion.div
                 ref={target}
                 style={{
@@ -51,7 +54,7 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
                     ]}
                 />
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 };
 

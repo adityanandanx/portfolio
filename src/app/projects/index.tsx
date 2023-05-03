@@ -9,7 +9,10 @@ interface indexProps {}
 
 const index: FC<indexProps> = ({}) => {
     return (
-        <section className="flex flex-col items-center justify-between gap-[100vh]">
+        <section
+            id="projects"
+            className="flex flex-col items-center justify-between gap-[100vh]"
+        >
             <Project
                 title="Todo List"
                 desc="A todo with minimal design and fast hotkeys for everything."
