@@ -21,9 +21,9 @@ const SmoothScrollWrapper: FC<SmoothScrollWrapperProps> = ({ children }) => {
     });
 
     return (
-        // <ReactLenis root options={{}}>
-        <>{children}</>
-        // </ReactLenis>
+        <ReactLenis root options={{}}>
+            <>{children}</>
+        </ReactLenis>
     );
 };
 
