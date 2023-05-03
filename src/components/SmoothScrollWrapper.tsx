@@ -13,10 +13,9 @@ const SmoothScrollWrapper: FC<SmoothScrollWrapperProps> = ({ children }) => {
     const blobity = useBlobity({
         licenseKey: "opensource",
         invert: true,
-        // dotColor: "#000000",
+        dotColor: "#EA580C",
         tooltipPadding: 10,
         radius: 8,
-        opacity: 0.1,
         magnetic: false,
     });
 
