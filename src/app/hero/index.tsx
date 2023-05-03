@@ -41,7 +41,7 @@ const Hero: FC<HeroProps> = ({}) => {
                         tooltipText="Say Hi!"
                     >
                         <Link
-                            href={"/"}
+                            href={"/#contact"}
                             className="inline-block w-fit text-left outline-none text-orange-600 dark:text-orange-400 px-3 py-0 -mx-3 bg-stone-100 dark:bg-stone-900 leading-none rounded-lg"
                         >
                             Aditya Nandan
