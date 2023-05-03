@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import {
     HTMLMotionProps,
     motion,
-    useInView,
     useScroll,
     useTransform,
 } from "framer-motion";
@@ -13,10 +12,10 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC, useRef } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import { MdArrowOutward, MdOpenInNew } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
 import { Url } from "url";
 
-const syne = Syne({ subsets: ["latin"], weight: ["600"] });
+const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 
 interface ProjectProps extends HTMLMotionProps<"div"> {
     title: string;
@@ -60,7 +59,6 @@ const Project: FC<ProjectProps> = ({
             <div className="pb-32 md:pb-0 flex flex-col md:group-even:flex-row-reverse md:flex-row items-center justify-between gap-10">
                 <motion.div
                     style={{
-                        // opacity,
                         y,
                     }}
                     className="flex-1 w-full flex flex-col gap-1"
