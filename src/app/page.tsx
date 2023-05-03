@@ -1,6 +1,9 @@
 import dynamic from "next/dynamic";
 import Loading from "./loading";
-import Nav from "./nav";
+
+const Nav = dynamic(async () => import("./nav"), {
+    ssr: false,
+});
 
 const Hero = dynamic(async () => import("./hero"), {
     ssr: false,

@@ -8,13 +8,13 @@ const Loading: FC<LoadingProps> = ({}) => {
     return (
         <div
             style={syne.style}
-            className="fixed inset-0 flex items-center flex-col justify-center"
+            className="fixed inset-0 flex items-center flex-col justify-center z-30 bg-stone-100 dark:bg-stone-800"
         >
-            <h1 className="opacity-5 absolute inset-0 text-5xl sm:text-7xl md:text-8xl lg:text-9xl flex items-center justify-center">
-                <span className="aspect-square border-4 border-stone-900 rounded-xl p-10 flex items-center justify-center">
+            {/* <h1 className="opacity-5 absolute inset-0 text-5xl sm:text-7xl md:text-8xl lg:text-9xl flex items-center justify-center">
+                <span className="aspect-square p-10 flex items-center justify-center">
                     Loading...
                 </span>
-            </h1>
+            </h1> */}
             <div className="grid grid-cols-1">
                 {Array.from({ length: 5 }).map((val, i) => (
                     <span
