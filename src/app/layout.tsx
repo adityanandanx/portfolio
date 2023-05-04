@@ -75,6 +75,10 @@ export default function RootLayout({
             <head>
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="theme-color" content="#292524" />
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="upgrade-insecure-requests"
+                />
             </head>
             <body className={`w-full h-full ${inter.className}`}>
                 <main className="w-full h-full px-5 md:px-10">
