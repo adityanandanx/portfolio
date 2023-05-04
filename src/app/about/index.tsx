@@ -8,7 +8,7 @@ const syne = Syne({ subsets: ["latin"], weight: ["800"] });
 const syneRegular = Syne({ subsets: ["latin"], weight: ["700"] });
 const About: FC<AboutProps> = ({}) => {
     return (
-        <section className="my-20 flex flex-col">
+        <section id="about" className="my-20 flex flex-col">
             <h1 style={syne.style} className="text-6xl sm:text-7xl md:text-8xl">
                 I Bring Ideas to Life{" "}
                 <FaHeart className="inline text-red-500" />
