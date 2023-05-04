@@ -76,7 +76,7 @@ export default function RootLayout({
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="theme-color" content="#292524" />
                 <meta
-                    http-equiv="Content-Security-Policy"
+                    httpEquiv="Content-Security-Policy"
                     content="upgrade-insecure-requests"
                 />
             </head>

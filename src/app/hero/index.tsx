@@ -33,7 +33,7 @@ const Hero: FC<HeroProps> = ({}) => {
                 style={{ position }}
                 className="fixed inset-0 top-0 p-10 flex flex-col justify-between h-full"
             >
-                <Heading className="w-fit" style={{ scale }}>
+                <Heading className="w-fit max-w-[70vw]" style={{ scale }}>
                     Hello There! <br />I am <br />
                     <CustomTooltip
                         side="bottom"
