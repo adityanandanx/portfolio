@@ -24,28 +24,29 @@ const About: FC<AboutProps> = ({}) => {
                     </p>
                     <p>
                         I specialize in creating custom websites that showcase
-                        your brand's personality and convey your message to your
-                        audience in a clear and visually stunning way. My
-                        designs are always tailored to meet your specific needs,
-                        and I take great care to ensure that every element of
-                        your site is optimized for both user experience and
-                        search engine optimization.
+                        your brand&rsquo;s personality and convey your message
+                        to your audience in a clear and visually stunning way.
+                        My designs are always tailored to meet your specific
+                        needs, and I take great care to ensure that every
+                        element of your site is optimized for both user
+                        experience and search engine optimization.
                     </p>
                     <p>
-                        Whether you're looking to build a simple, responsive
-                        website or a complex, interactive web application, I am
-                        here to help. With my expertise in the latest web
-                        development technologies and my commitment to delivering
-                        exceptional results, I am confident that I can create a
-                        unique web experience that exceeds your expectations.
+                        Whether you&rsquo;re looking to build a simple,
+                        responsive website or a complex, interactive web
+                        application, I am here to help. With my expertise in the
+                        latest web development technologies and my commitment to
+                        delivering exceptional results, I am confident that I
+                        can create a unique web experience that exceeds your
+                        expectations.
                     </p>
                     <p>
-                        So, if you're looking for a creative web developer who
-                        can bring your ideas to life and help you stand out in a
-                        crowded online marketplace, look no further. Let's work
-                        together to create a website that reflects your brand's
-                        values, engages your audience, and helps you achieve
-                        your business goals.
+                        So, if you&rsquo;re looking for a creative web developer
+                        who can bring your ideas to life and help you stand out
+                        in a crowded online marketplace, look no further.
+                        Let&rsquo;s work together to create a website that
+                        reflects your brand&rsquo;s values, engages your
+                        audience, and helps you achieve your business goals.
                     </p>
                 </div>
                 <div className="flex flex-row md:flex-col">
