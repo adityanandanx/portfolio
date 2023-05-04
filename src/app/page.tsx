@@ -28,7 +28,7 @@ export default async function Home() {
             <Hero />
             <Projects />
             <About />
-            <Testimonials />
+            {/* <Testimonials /> */}
             <Talk />
         </>
     );
