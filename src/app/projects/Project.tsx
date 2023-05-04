@@ -93,8 +93,12 @@ const Project: FC<ProjectProps> = ({
                     </div>
                     <div className="flex gap-5">
                         {github && (
-                            <Link href={github}>
+                            <Link
+                                aria-label={`Github link for ${title}`}
+                                href={github}
+                            >
                                 <Button
+                                    aria-label={`Github button for ${title}`}
                                     className="text-3xl p-2 text-inherit"
                                     variant={"secondary"}
                                 >
@@ -103,8 +107,12 @@ const Project: FC<ProjectProps> = ({
                             </Link>
                         )}
                         {live && (
-                            <Link href={live}>
+                            <Link
+                                aria-label={`Live link for ${title}`}
+                                href={live}
+                            >
                                 <Button
+                                    aria-label={`Live button for ${title}`}
                                     className="text-3xl p-2 text-inherit"
                                     variant={"secondary"}
                                 >
@@ -122,7 +130,11 @@ const Project: FC<ProjectProps> = ({
                         }}
                         className="absolute -bottom-6 sm:-bottom-32 left-5 right-5 -z-10 lg:static lg:w-1/2"
                     >
-                        <Image className="" src={imgPath} alt={title} />
+                        <Image
+                            className="overflow-hidden"
+                            src={imgPath}
+                            alt={title}
+                        />
                     </motion.div>
                 )}
             </div>

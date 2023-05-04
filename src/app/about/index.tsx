@@ -51,9 +51,9 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
                 <div className="flex flex-row md:flex-col">
                     <div className="flex-1 sm:flex-auto w-full">
-                        <h3 style={syneRegular.style} className="text-2xl mb-5">
+                        <h2 style={syneRegular.style} className="text-2xl mb-5">
                             Frontend Tools
-                        </h3>
+                        </h2>
                         <ul>
                             <li>React JS</li>
                             <li>Next JS</li>
@@ -62,12 +62,12 @@ const About: FC<AboutProps> = ({}) => {
                             <li>Javascript</li>
                             <li>HTML 5</li>
                         </ul>
-                        <h3
+                        <h2
                             style={syneRegular.style}
                             className="text-2xl mt-10 mb-5"
                         >
                             UI Libraries
-                        </h3>
+                        </h2>
                         <ul>
                             <li>Radix UI</li>
                             <li>Tailwind CSS</li>

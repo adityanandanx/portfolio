@@ -72,6 +72,10 @@ export default function RootLayout({
             className="w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased"
             lang="en"
         >
+            <head>
+                <link rel="manifest" href="/manifest.json" />
+                <meta name="theme-color" content="#292524" />
+            </head>
             <body className={`w-full h-full ${inter.className}`}>
                 <main className="w-full h-full px-5 md:px-10">
                     <SmoothScrollWrapper>

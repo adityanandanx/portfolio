@@ -1,0 +1,9 @@
+{
+  "name": "Aditya Nandan - Creative Web Developer and Designer",
+  "short_name": "Aditya Nandan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#292524",
+  "orientation": "portrait-primary"
+}

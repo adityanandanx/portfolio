@@ -17,6 +17,7 @@ const Socials: FC<SocialsProps> = ({ socials, className, ...props }) => {
                     <Button
                         className="text-4xl p-0 text-inherit"
                         variant={"secondary"}
+                        aria-label={social.name}
                     >
                         {social.icon}
                     </Button>

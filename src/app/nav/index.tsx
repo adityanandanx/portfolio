@@ -16,6 +16,7 @@ const Nav: FC<navProps> = ({}) => {
         <Dialog.Root onOpenChange={(o) => setOpen(o)}>
             <Dialog.Trigger asChild>
                 <motion.button
+                    aria-label="Menu Button"
                     animate={{ skewX: open ? "-30deg" : "0deg" }}
                     whileTap={{ scale: 0.95 }}
                     className="text-5xl fixed top-0 right-0 z-20 cursor-pointer p-10 text-stone-50 mix-blend-difference outline-none"

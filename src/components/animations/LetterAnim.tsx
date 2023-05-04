@@ -42,12 +42,13 @@ const LetterAnim: FC<LetterAnimProps> = ({ text }) => {
             ref={containerRef}
             className="flex flex-wrap"
             aria-label={text}
+            role="heading"
         >
             {/* {inView.toString()} */}
             {words.map((word, i) => {
                 const letters = word.split("");
                 return (
-                    <div key={i} className="flex">
+                    <div aria-hidden key={i} className="flex">
                         {letters.map((letter, j) => {
                             return (
                                 <motion.span
