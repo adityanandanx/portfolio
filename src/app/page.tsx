@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Loading from "./loading";
+import About from "./about";
 
 const Nav = dynamic(async () => import("./nav"), {
     ssr: false,
@@ -26,6 +27,7 @@ export default async function Home() {
             {/* <Loading /> */}
             <Hero />
             <Projects />
+            <About />
             <Testimonials />
             <Talk />
         </>
