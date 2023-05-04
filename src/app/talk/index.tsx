@@ -14,7 +14,7 @@ interface TalkProps {}
 const Talk: FC<TalkProps> = ({}) => {
     return (
         <section id="contact" className="w-full min-h-[90vh] p-0">
-            <div className="w-full h-full p-16 md:p-24 bg-stone-800 dark:bg-stone-700 text-stone-50 rounded-xl flex flex-col items-start justify-between">
+            <div className="w-full h-full p-10 py-16 md:p-24 bg-stone-800 dark:bg-stone-700 text-stone-50 rounded-xl flex flex-col items-start justify-between">
                 <div className="h-full">
                     <h2 className="text-2xl">
                         <LetterAnim text="Have a project for Me?" />

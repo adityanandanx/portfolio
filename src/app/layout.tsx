@@ -81,7 +81,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`w-full h-full ${inter.className}`}>
-                <main className="w-full h-full px-5 md:px-10">
+                <main className="w-full h-full px-00">
                     <SmoothScrollWrapper>
                         {children}
                         <Analytics />
