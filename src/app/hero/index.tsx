@@ -58,10 +58,14 @@ const Hero: FC<HeroProps> = ({}) => {
                         scale brands.
                     </p>
                     <div className="flex flex-col items-start gap-3">
-                        <Button>
-                            Get In Touch <MdChevronRight />
-                        </Button>
-                        <Button variant={"secondary"}>Projects</Button>
+                        <Link href={"/#contact"}>
+                            <Button>
+                                Get In Touch <MdChevronRight />
+                            </Button>
+                        </Link>
+                        <Link href={"/#projects"}>
+                            <Button variant={"secondary"}>Projects</Button>
+                        </Link>
                     </div>
                 </motion.div>
             </motion.div>
