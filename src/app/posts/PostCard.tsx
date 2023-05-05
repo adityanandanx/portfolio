@@ -18,7 +18,10 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
                 <h2 className="text-xl font-bold">{post.title}</h2>
                 <div className="flex flex-wrap gap-2 capitalize text-sm">
                     {post.tags?.map((tag) => (
-                        <span className="rounded-full border text-stone-500 border-current px-3">
+                        <span
+                            key={tag}
+                            className="rounded-full border text-stone-500 border-current px-3"
+                        >
                             {tag}
                         </span>
                     ))}
