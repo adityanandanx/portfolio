@@ -9,10 +9,20 @@ export const Post = defineDocumentType(() => ({
             description: "The title of the post",
             required: true,
         },
+        heroImg: {
+            type: "string",
+            description: "Hero Image of the post",
+            required: true,
+            default: "/assets/posts/placeholder.jpg",
+        },
         date: {
             type: "date",
             description: "The date of the post",
             required: true,
+        },
+        tags: {
+            type: "list",
+            of: { type: "string" },
         },
     },
     computedFields: {

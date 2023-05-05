@@ -1,3 +1,4 @@
+"use client";
 import { Variants, motion, useInView } from "framer-motion";
 import { FC, useRef } from "react";
 
