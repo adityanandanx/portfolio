@@ -32,7 +32,7 @@ const Page = async ({ params }: PageProps) => {
                 height={760}
                 className="w-full h-full object-cover rounded-xl"
             />
-            <div className="flex justify-between">
+            <div className="flex justify-between sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-900 items-center">
                 <time
                     dateTime={post.date}
                     className="block text-xs text-slate-600"
