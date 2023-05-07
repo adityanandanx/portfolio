@@ -13,7 +13,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
     return (
         <Link
             href={post.url}
-            className="py-6 flex flex-col sm:flex-row sm:items-center gap-5 mb-20"
+            className="py-6 flex flex-col sm:flex-row sm:items-center gap-5 mb-20 group"
         >
             <div className="flex-1 flex flex-col gap-2">
                 <h2 className="text-xl font-bold">{post.title}</h2>
@@ -25,13 +25,15 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
                     {format(parseISO(post.date), "LLLL d, yyyy")}
                 </time>
             </div>
-            <Image
-                src={post.heroImg}
-                alt={`${post.title} hero image`}
-                width={512}
-                height={512}
-                className="w-auto sm:max-w-[256px] object-cover rounded-md overflow-hidden border-stone-900"
-            />
+            <div className="overflow-hidden rounded-md border-stone-900">
+                <Image
+                    src={post.heroImg}
+                    alt={`${post.title} hero image`}
+                    width={512}
+                    height={512}
+                    className="w-auto sm:max-w-[256px] object-cover group-hover:scale-125 transition-transform"
+                />
+            </div>
         </Link>
     );
 };
