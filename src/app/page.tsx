@@ -24,7 +24,6 @@ const About = dynamic(async () => import("./about"));
 export default async function Home() {
     return (
         <>
-            <Nav />
             <Hero />
             <Projects />
             <About />

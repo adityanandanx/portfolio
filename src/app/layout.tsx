@@ -2,6 +2,7 @@ import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Nav from "./nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -81,6 +82,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`w-full h-full ${inter.className}`}>
+                <Nav />
                 <main className="w-full h-full px-00">
                     <SmoothScrollWrapper>
                         {children}

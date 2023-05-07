@@ -15,7 +15,7 @@ const LINKS: Link[] = [
     { name: "Home", href: "/#home" },
     { name: "About Me", href: "/#about" },
     { name: "Projects", href: "/#projects" },
-    // { name: "Testimonials", href: "/#testimonials" },
+    { name: "Blog", href: "/posts" },
     { name: "Contact", href: "/#contact" },
 ];
 
