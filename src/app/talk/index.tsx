@@ -11,8 +11,8 @@ interface TalkProps {}
 
 const Talk: FC<TalkProps> = ({}) => {
     return (
-        <section id="contact" className="w-full min-h-[90vh] p-0">
-            <div className="w-full h-full p-10 py-16 md:p-24 bg-stone-800 dark:bg-stone-700 text-stone-50 rounded-xl flex flex-col items-start justify-between">
+        <section id="contact" className="relative w-full min-h-[90vh] p-0">
+            <div className="absolute bottom-0 w-full h-full p-10 py-16 md:p-24 bg-stone-800 dark:bg-stone-700 text-stone-50 rounded-t-xl flex flex-col items-start justify-between">
                 <div className="h-full">
                     <h2 className="text-2xl font-Syne font-medium">
                         <LetterAnim text="Have a project for Me?" />
@@ -25,7 +25,7 @@ const Talk: FC<TalkProps> = ({}) => {
                         action="mailto:dev2005adi@gmail.com"
                         method="get"
                         encType="text/plain"
-                        className="max-w-md flex flex-col gap-3 h-full flex-1 my-20"
+                        className="max-w-md flex flex-col gap-3 flex-1 my-20"
                     >
                         <Field required id="subject" labelText="Subject" />
                         <Field required id="email" labelText="Your Email" />
