@@ -3,7 +3,6 @@ import {
     AnimatePresence,
     PanInfo,
     motion,
-    useAnimation,
     useAnimationControls,
 } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";

@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Url } from "url";
 
 import johnSrc from "./john.webp";
 export interface ITestimonial {

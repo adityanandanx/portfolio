@@ -1,9 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import PostCard from "./PostCard";
-import { Syne } from "next/font/google";
-
-const syne = Syne({ subsets: ["latin"], weight: ["600"] });
 
 interface BlogsHomeProps {}
 
@@ -15,10 +12,7 @@ const BlogsHome = async ({}: BlogsHomeProps) => {
     return (
         <>
             <div className="">
-                <h1
-                    style={{ ...syne.style }}
-                    className="text-7xl sm:text-8xl md:text-9xl mt-10 md:mt-20"
-                >
+                <h1 className="text-7xl sm:text-8xl md:text-9xl mt-10 md:mt-20 font-Syne font-bold">
                     Blogs
                 </h1>
                 {posts.map((post) => (

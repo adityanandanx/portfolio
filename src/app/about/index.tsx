@@ -4,15 +4,13 @@ import { FaHeart } from "react-icons/fa";
 
 interface AboutProps {}
 
-const syne = Syne({ subsets: ["latin"], weight: ["800"] });
-const syneRegular = Syne({ subsets: ["latin"], weight: ["700"] });
 const About: FC<AboutProps> = ({}) => {
     return (
         <section
             id="about"
             className="my-20 flex flex-col max-w-5xl mx-auto px-5"
         >
-            <h1 style={syne.style} className="text-6xl sm:text-7xl md:text-8xl">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl font-Syne font-bold">
                 I Bring Ideas to Life{" "}
                 <FaHeart className="inline text-red-500" />
             </h1>
@@ -54,7 +52,7 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
                 <div className="flex flex-row md:flex-col">
                     <div className="flex-1 sm:flex-auto w-full">
-                        <h2 style={syneRegular.style} className="text-2xl mb-5">
+                        <h2 className="text-2xl mb-5 font-Syne font-semibold">
                             Frontend Tools
                         </h2>
                         <ul>
@@ -65,10 +63,7 @@ const About: FC<AboutProps> = ({}) => {
                             <li>Javascript</li>
                             <li>HTML 5</li>
                         </ul>
-                        <h2
-                            style={syneRegular.style}
-                            className="text-2xl mt-10 mb-5"
-                        >
+                        <h2 className="text-2xl mt-10 mb-5 font-Syne font-semibold">
                             UI Libraries
                         </h2>
                         <ul>

@@ -1,10 +1,23 @@
 import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import Nav from "./nav";
+import dynamic from "next/dynamic";
 
-const inter = Inter({ subsets: ["latin"] });
+const Nav = dynamic(async () => import("./nav"), {
+    ssr: false,
+});
+
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter",
+});
+
+const syne = Syne({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-syne",
+});
 
 const title = "Aditya Nandan - Creative Web Developer and Designer";
 const description =
@@ -70,7 +83,7 @@ export default function RootLayout({
 }) {
     return (
         <html
-            className="w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased"
+            className={`font-sans w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased ${inter.variable} ${syne.variable}`}
             lang="en"
         >
             <head>
@@ -81,7 +94,7 @@ export default function RootLayout({
                     content="upgrade-insecure-requests"
                 />
             </head>
-            <body className={`w-full h-full ${inter.className}`}>
+            <body className={`w-full h-full`}>
                 <Nav />
                 <main className="w-full h-full px-00">
                     <SmoothScrollWrapper>

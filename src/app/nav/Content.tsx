@@ -1,11 +1,9 @@
 import { Variants, motion } from "framer-motion";
-import { Syne } from "next/font/google";
 import Link from "next/link";
 import { FC } from "react";
 import { Url } from "url";
 import { DialogClose } from "@radix-ui/react-dialog";
 
-const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 interface Link {
     name: string;
     href: string | Url;
@@ -31,10 +29,7 @@ const Content: FC<ContentProps> = ({}) => {
         },
     };
     return (
-        <motion.div
-            style={syne.style}
-            className="relative w-full h-full text-4xl sm:text-7xl md:text-8xl overflow-hidden"
-        >
+        <motion.div className="relative w-full h-full text-4xl sm:text-7xl md:text-8xl overflow-hidden font-Syne font-bold">
             <motion.ul
                 variants={containerVariant}
                 initial={"hidden"}
