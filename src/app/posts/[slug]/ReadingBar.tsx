@@ -16,7 +16,7 @@ const ReadingBar: FC<ReadingBarProps> = ({ targetRef }) => {
     return (
         <motion.div
             style={{ width }}
-            className="fixed top-0 left-0 h-2 bg-orange-500 rounded-r-full"
+            className="fixed top-0 left-0 h-1 bg-orange-500 rounded-full shadow-md shadow-orange-500/50 z-50"
         ></motion.div>
     );
 };
