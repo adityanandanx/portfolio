@@ -32,7 +32,7 @@ const Page = async ({ params }: PageProps) => {
                 height={760}
                 className="w-full h-full object-cover rounded-xl"
             />
-            <div className="flex justify-between sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-900 items-center">
+            <div className="flex justify-between sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-800 items-center">
                 <time
                     dateTime={post.date}
                     className="block text-xs text-stone-600"
@@ -42,7 +42,7 @@ const Page = async ({ params }: PageProps) => {
                 {post.tags && <PostTags tags={post.tags} />}
             </div>
             <article
-                className="prose prose-stone mx-auto min-w-full"
+                className="prose prose-stone dark:prose-invert mx-auto min-w-full"
                 dangerouslySetInnerHTML={{ __html: post.body.html }}
             ></article>
             <ReadingBar />
