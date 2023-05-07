@@ -23,9 +23,9 @@ const ReadingBar: FC<ReadingBarProps> = ({ targetRef }) => {
             ></motion.div>
             <Link
                 href={"/posts"}
-                className="fixed top-0 left-0 p-5 sm:p-10  text-stone-50 mix-blend-difference outline-none"
+                className="fixed top-0 left-0 p-5 sm:p-10  text-stone-50 mix-blend-difference outline-none z-50"
             >
-                <motion.button className="">
+                <motion.button className="outline-none">
                     <MdArrowBack className="text-5xl" />
                 </motion.button>
             </Link>

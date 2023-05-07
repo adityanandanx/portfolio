@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 
 interface PostTagProps {
@@ -9,6 +10,7 @@ const PostTags: FC<PostTagProps> = ({ tags }) => {
         <div className="flex flex-wrap text-sm gap-2 capitalize">
             {tags.map((tag) => (
                 <span
+                    // href={`/posts?tag=${tag}`}
                     key={tag}
                     className="rounded-full border text-stone-500 border-current px-3"
                 >

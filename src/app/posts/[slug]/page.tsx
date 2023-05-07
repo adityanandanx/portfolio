@@ -20,6 +20,8 @@ const Page = async ({ params }: PageProps) => {
         (post) => post._raw.flattenedPath === params.slug
     );
 
+    // console.log(params);
+
     // 404 if the post does not exist.
     if (!post) notFound();
 
@@ -33,7 +35,7 @@ const Page = async ({ params }: PageProps) => {
                 height={760}
                 className="w-full h-full object-cover rounded-xl"
             />
-            <div className="flex justify-between sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-800 items-center">
+            <div className="flex justify-between static sm:sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-800 items-center">
                 <time
                     dateTime={post.date}
                     className="block text-xs text-stone-500"
