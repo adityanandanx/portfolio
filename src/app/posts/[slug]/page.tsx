@@ -26,6 +26,7 @@ const Page = async ({ params }: PageProps) => {
     return (
         <div className="flex flex-col gap-10">
             <Image
+                priority
                 src={post.heroImg}
                 alt={post.title}
                 width={1200}
@@ -35,7 +36,7 @@ const Page = async ({ params }: PageProps) => {
             <div className="flex justify-between sticky top-0 py-3 border-b border-stone-500 bg-stone-100 dark:bg-stone-800 items-center">
                 <time
                     dateTime={post.date}
-                    className="block text-xs text-stone-600"
+                    className="block text-xs text-stone-500"
                 >
                     {format(parseISO(post.date), "LLLL d, yyyy")}
                 </time>
