@@ -1,6 +1,9 @@
-import { FC } from "react";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import PostTags from "@/components/ui/PostTags";
+import { format, parseISO } from "date-fns";
+import ReadingBar from "./ReadingBar";
 
 export async function generateStaticParams() {
     return allPosts.map((post) => ({
@@ -21,12 +24,29 @@ const Page = async ({ params }: PageProps) => {
     if (!post) notFound();
 
     return (
-        <>
+        <div className="flex flex-col gap-10">
+            <Image
+                src={post.heroImg}
+                alt={post.title}
+                width={1200}
+                height={760}
+                className="w-full h-full object-cover rounded-xl"
+            />
+            <div className="flex justify-between">
+                <time
+                    dateTime={post.date}
+                    className="block text-xs text-slate-600"
+                >
+                    {format(parseISO(post.date), "LLLL d, yyyy")}
+                </time>
+                {post.tags && <PostTags tags={post.tags} />}
+            </div>
             <article
-                className="prose prose-stone"
+                className="prose prose-stone mx-auto min-w-full"
                 dangerouslySetInnerHTML={{ __html: post.body.html }}
             ></article>
-        </>
+            <ReadingBar />
+        </div>
     );
 };
 
