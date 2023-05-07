@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { compareDesc, format, parseISO } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { Post } from "contentlayer/generated";
 import Link from "next/link";
 import Image from "next/image";

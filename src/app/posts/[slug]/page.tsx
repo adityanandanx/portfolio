@@ -23,6 +23,7 @@ const Page = async ({ params }: PageProps) => {
     return (
         <>
             <article
+                className="prose prose-stone"
                 dangerouslySetInnerHTML={{ __html: post.body.html }}
             ></article>
         </>
