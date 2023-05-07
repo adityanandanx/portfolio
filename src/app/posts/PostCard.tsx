@@ -20,7 +20,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
                 {post.tags && <PostTags tags={post.tags} />}
                 <time
                     dateTime={post.date}
-                    className="block text-xs text-slate-600"
+                    className="block text-xs text-stone-500"
                 >
                     {format(parseISO(post.date), "LLLL d, yyyy")}
                 </time>
