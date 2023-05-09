@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import PostTags from "@/components/ui/PostTags";
+import PostTags, { LinkedPostTags } from "@/components/ui/PostTags";
 import { format, parseISO } from "date-fns";
 import ReadingBar from "./ReadingBar";
 
@@ -16,11 +16,10 @@ interface PageProps {
 }
 
 const Page = async ({ params }: PageProps) => {
-    const post = allPosts.find(
-        (post) => post._raw.flattenedPath === params.slug
-    );
+    const { slug } = params;
+    const post = allPosts.find((post) => post._raw.flattenedPath === slug);
 
-    // console.log(params);
+    console.log(params);
 
     // 404 if the post does not exist.
     if (!post) notFound();
@@ -42,7 +41,7 @@ const Page = async ({ params }: PageProps) => {
                 >
                     {format(parseISO(post.date), "LLLL d, yyyy")}
                 </time>
-                {post.tags && <PostTags tags={post.tags} />}
+                {post.tags && <LinkedPostTags tags={post.tags} />}
             </div>
             <article
                 className="prose prose-stone dark:prose-invert mx-auto min-w-full"

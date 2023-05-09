@@ -2,12 +2,25 @@ import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import PostCard from "./PostCard";
 
-interface BlogsHomeProps {}
+interface BlogsHomeProps {
+    searchParams?: { tag?: string; title?: string };
+}
 
-const BlogsHome = async ({}: BlogsHomeProps) => {
-    const posts = allPosts.sort((a, b) => {
+const BlogsHome = async ({ searchParams }: BlogsHomeProps) => {
+    let posts = allPosts.sort((a, b) => {
         return compareDesc(new Date(a.date), new Date(b.date));
     });
+
+    if (searchParams) {
+        const { tag: filterTag, title: filterTitle } = searchParams;
+        if (filterTag) {
+            posts = posts.filter((post) => post.tags?.includes(filterTag));
+        } else if (filterTitle) {
+            posts = posts.filter((post) =>
+                post.title.toLowerCase().includes(filterTitle)
+            );
+        }
+    }
 
     return (
         <>
