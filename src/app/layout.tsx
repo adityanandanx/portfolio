@@ -44,6 +44,9 @@ export const metadata = {
     generator: "Next.js",
     applicationName: "Aditya Nandan - Portfolio",
     referrer: "origin-when-cross-origin",
+    themeColor: "#292524",
+    manifest: "/manifest.json",
+    robots: "all",
     keywords: [
         "Next.js",
         "React",
@@ -87,12 +90,10 @@ export default function RootLayout({
             lang="en"
         >
             <head>
-                <link rel="manifest" href="/manifest.json" />
-                <meta name="theme-color" content="#292524" />
-                <meta
+                {/* <meta
                     httpEquiv="Content-Security-Policy"
                     content="upgrade-insecure-requests"
-                />
+                /> */}
             </head>
             <body className={`w-full h-full`}>
                 <Nav />
