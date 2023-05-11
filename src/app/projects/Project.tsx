@@ -127,9 +127,10 @@ const Project: FC<ProjectProps> = ({
                         className="absolute -bottom-6 sm:-bottom-32 left-5 right-5 -z-10 lg:static lg:w-1/2"
                     >
                         <Image
-                            className="overflow-hidden"
+                            className="overflow-hidden mx-auto"
                             src={imgPath}
                             alt={title}
+                            width={900}
                         />
                     </motion.div>
                 )}
