@@ -1,13 +1,22 @@
+"use client";
+import { motion, useInView } from "framer-motion";
 import { Syne } from "next/font/google";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { FaHeart } from "react-icons/fa";
 
 interface AboutProps {}
 
 const About: FC<AboutProps> = ({}) => {
+    const containerRef = useRef(null);
+    const inView = useInView(containerRef, { once: true });
+
     return (
-        <section
+        <motion.section
+            ref={containerRef}
             id="about"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 1 }}
             className="my-20 flex flex-col max-w-5xl mx-auto px-5"
         >
             <h1 className="text-6xl sm:text-7xl md:text-8xl font-Syne font-bold">
@@ -75,7 +84,7 @@ const About: FC<AboutProps> = ({}) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
