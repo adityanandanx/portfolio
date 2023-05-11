@@ -2,11 +2,8 @@
 import { FC, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { MdClose, MdMenu } from "react-icons/md";
-import { Syne } from "next/font/google";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import Content from "./Content";
-
-const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 
 interface navProps {}
 

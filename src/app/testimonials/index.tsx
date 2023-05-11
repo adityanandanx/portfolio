@@ -1,10 +1,6 @@
 "use client";
-import Image from "next/image";
-import { FC, useEffect, useRef, useState } from "react";
-import { FaQuoteLeft } from "react-icons/fa";
-import Testimonial from "./Testimonial";
-import { motion, useInView, useMotionValue, useTransform } from "framer-motion";
-import useWindowSize from "./useWindowSize";
+import { FC, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import TestimonialSlider from "./TestimonialSlider";
 
 interface TestimonialsProps {}

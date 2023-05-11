@@ -7,15 +7,12 @@ import {
     useScroll,
     useTransform,
 } from "framer-motion";
-import { Syne } from "next/font/google";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC, useRef } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { Url } from "url";
-
-const syne = Syne({ subsets: ["latin"], weight: ["700"] });
 
 interface ProjectProps extends HTMLMotionProps<"div"> {
     title: string;
@@ -70,7 +67,6 @@ const Project: FC<ProjectProps> = ({
                         href={live || "/"}
                     >
                         <motion.h1
-                            style={syne.style}
                             initial={{
                                 backgroundSize: "0% 2px",
                             }}
@@ -78,7 +74,7 @@ const Project: FC<ProjectProps> = ({
                                 backgroundSize: "100% 2px",
                             }}
                             transition={{ duration: 0.5 }}
-                            className="peer text-4xl inline text-justify bg-gradient-to-r from-current to-current/50 bg-no-repeat bg-left-bottom"
+                            className="peer text-4xl inline text-justify bg-gradient-to-r from-current to-current/50 bg-no-repeat bg-left-bottom font-Syne font-medium"
                         >
                             {desc}
                         </motion.h1>

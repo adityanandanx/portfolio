@@ -1,9 +1,23 @@
 import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import dynamic from "next/dynamic";
 
-const inter = Inter({ subsets: ["latin"] });
+const Nav = dynamic(async () => import("./nav"), {
+    ssr: false,
+});
+
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter",
+});
+
+const syne = Syne({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-syne",
+});
 
 const title = "Aditya Nandan - Creative Web Developer and Designer";
 const description =
@@ -30,6 +44,9 @@ export const metadata = {
     generator: "Next.js",
     applicationName: "Aditya Nandan - Portfolio",
     referrer: "origin-when-cross-origin",
+    themeColor: "#292524",
+    manifest: "/manifest.json",
+    robots: "all",
     keywords: [
         "Next.js",
         "React",
@@ -69,18 +86,17 @@ export default function RootLayout({
 }) {
     return (
         <html
-            className="w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased"
+            className={`font-sans w-full h-fit bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-stone-50 overflow-x-hidden antialiased ${inter.variable} ${syne.variable}`}
             lang="en"
         >
             <head>
-                <link rel="manifest" href="/manifest.json" />
-                <meta name="theme-color" content="#292524" />
-                <meta
+                {/* <meta
                     httpEquiv="Content-Security-Policy"
                     content="upgrade-insecure-requests"
-                />
+                /> */}
             </head>
-            <body className={`w-full h-full ${inter.className}`}>
+            <body className={`w-full h-full`}>
+                <Nav />
                 <main className="w-full h-full px-00">
                     <SmoothScrollWrapper>
                         {children}
