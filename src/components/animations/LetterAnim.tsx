@@ -13,7 +13,7 @@ const LetterAnim: FC<LetterAnimProps> = ({ text }) => {
   const containerRef = useRef(null);
   const inView = useInView(containerRef, {
     margin: "100px 100px -100px 100px",
-    // once: true,
+    once: true,
   });
 
   const containerVariant: Variants = {
