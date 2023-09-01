@@ -51,7 +51,7 @@ const Hero: FC<HeroProps> = ({}) => {
             I am a self-taught Frontend Web Developer and Designer and I make
             unique web experiences for small to large scale brands.
           </p>
-          <div className="flex justify-between items-end w-full">
+          <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-5 w-full">
             <div className="flex flex-col items-start gap-3">
               <Link href={"/#contact"}>
                 <Button>
