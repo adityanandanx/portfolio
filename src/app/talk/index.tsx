@@ -62,7 +62,7 @@ const Talk: FC<TalkProps> = ({}) => {
               },
               {
                 name: "Github",
-                href: "https://github.com/iMADi-ARCH/cryptracker",
+                href: "https://github.com/iMADi-ARCH",
                 icon: <FaGithub />,
               },
             ]}

@@ -77,7 +77,7 @@ const Hero: FC<HeroProps> = ({}) => {
                 },
                 {
                   name: "Github",
-                  href: "https://github.com/iMADi-ARCH/cryptracker",
+                  href: "https://github.com/iMADi-ARCH",
                   icon: <FaGithub />,
                 },
               ]}
