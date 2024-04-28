@@ -77,7 +77,7 @@ const Hero: FC<HeroProps> = ({}) => {
                 },
                 {
                   name: "Github",
-                  href: "https://github.com/iMADi-ARCH",
+                  href: "https://github.com/adityanandanx",
                   icon: <FaGithub />,
                 },
               ]}
