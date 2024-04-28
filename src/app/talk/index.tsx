@@ -62,7 +62,7 @@ const Talk: FC<TalkProps> = ({}) => {
               },
               {
                 name: "Github",
-                href: "https://github.com/iMADi-ARCH",
+                href: "https://github.com/adityanandanx",
                 icon: <FaGithub />,
               },
             ]}
